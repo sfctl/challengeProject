@@ -20,6 +20,8 @@ class DetailViewController: UIViewController {
         countryLabel.text = selectedCountry
         print(selectedCountry)
         
+        
+        
         }
 
 }
