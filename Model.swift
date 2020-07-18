@@ -18,10 +18,10 @@ struct ProjectModel: Codable {
     var by : String
     var country : String
     var currency : String
-    var endtime : Int
+    var endtime : String
     var location : String
     var percentage : Int
-    var numBackers : Int
+    var numBackers : String
     var state : String
     var title : String
     var type : String
@@ -30,20 +30,20 @@ struct ProjectModel: Codable {
     
     enum CodingKeys: String, CodingKey {
            case sno = "s.no"
-           case amtpledged
-           case blurb = "blurb"
-           case by = "by"
+           case amtpledged = "amt.pledged"
+           case blurb
+           case by
            case country
            case currency
-           case endtime
+           case endtime = "end.time"
            case location
-           case percentage
-           case numBackers
+           case percentage = "percentage.funded"
+           case numBackers = "num.backers"
            case state
            case title
            case type
            case url
-     }
+     }  
     
 }
 
