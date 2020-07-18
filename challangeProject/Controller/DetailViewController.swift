@@ -13,12 +13,12 @@ class DetailViewController: UIViewController {
 
 
     @IBOutlet weak var countryLabel: UILabel!
-    var selectedCountry = ""
+    var selectedItem : ProjectModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countryLabel.text = selectedCountry
-        print(selectedCountry)
+        countryLabel.text = selectedItem?.blurb
+        
         
         
         

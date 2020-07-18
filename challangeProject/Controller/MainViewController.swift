@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
     
     
     var countryArray : [String] = []
+    var chosenItem : ProjectModel?
+    
     var selectedIndex = ""
     var model = [ProjectModel]()
     let imageArray : [UIImage] = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!]
@@ -60,7 +62,7 @@ class MainViewController: UIViewController {
             
             let destinationVC = segue.destination as!  DetailViewController
             
-            destinationVC.selectedCountry = selectedIndex
+            destinationVC.selectedItem = chosenItem
             
         }
     }
@@ -86,6 +88,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
      //   selectedIndex = "\(countryArray[indexPath.row])"
         
+        chosenItem = model[indexPath.row]
         performSegue(withIdentifier: "toDetailVC", sender: self)
         
     }
