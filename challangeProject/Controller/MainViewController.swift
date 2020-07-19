@@ -30,9 +30,9 @@ class MainViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: "CollectionViewCell")
-        
+        self.collectionView.reloadData()
         fetchData()
-        
+         
     }
 
     func fetchData(){
@@ -52,9 +52,12 @@ class MainViewController: UIViewController {
             } catch  {
                 print(error)
             }
+            
+              
+            
         }.resume()
         
-         self.collectionView.reloadData()
+      
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
