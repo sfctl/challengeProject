@@ -24,13 +24,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var chosenImage: UIImageView!
     
     var selectedItem : ProjectModel?
-   // var chosenImage:UIImage? = nil
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
+       
         countryLabel.text = selectedItem?.country
         byLabel.text = selectedItem?.by
         blurbLabel.text = selectedItem?.blurb

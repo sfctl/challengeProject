@@ -21,9 +21,8 @@ class MainViewController: UIViewController {
     var chosenItem : ProjectModel?
     var model = [ProjectModel]()
     var imageCounter = 0
-    let imageArray : [UIImage] = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!]
+    let imageArray : [UIImage] = [UIImage(named: "3")!]
    
-    var selectedImage = UIImage()
     
     
     override func viewDidLoad() {
@@ -75,7 +74,8 @@ class MainViewController: UIViewController {
             let destinationVC = segue.destination as!  DetailViewController
             
             destinationVC.selectedItem = chosenItem
-            destinationVC.chosenImage.image! = selectedImage
+            
+            
         }
     }
     
@@ -92,12 +92,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
 
         
-        cell.imageCell.image = imageArray[imageCounter]
-        imageCounter += 1
-        if imageCounter == 3 {
-            imageCounter = 0
-        }
-  
+        cell.imageCell.image = imageArray[0]
         cell.titleLabel.text = "\(model[indexPath.row].title)"
         cell.subtitleLabel.text = "\(model[indexPath.row].by)"
         cell.layer.borderColor = UIColor.lightGray.cgColor
@@ -108,7 +103,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
      
-        selectedImage = imageArray[indexPath.row]
+       
         chosenItem = model[indexPath.row]
         performSegue(withIdentifier: "toDetailVC", sender: self)
         
