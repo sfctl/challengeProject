@@ -127,7 +127,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="cJA-FT-j3m">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJA-FT-j3m">
                                 <rect key="frame" x="0.0" y="128" width="414" height="166"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFO-vX-h5B">
@@ -195,12 +195,13 @@
                     <navigationItem key="navigationItem" id="g4J-CL-QzD"/>
                     <connections>
                         <outlet property="amtLabel" destination="ne0-bI-6nv" id="DB4-kV-QHs"/>
+                        <outlet property="bgView" destination="ZQv-5c-1qw" id="ktX-gK-hW0"/>
                         <outlet property="blurbLabel" destination="uFO-vX-h5B" id="sgX-M4-XDN"/>
                         <outlet property="byLabel" destination="pyb-Jx-6iR" id="Wt2-be-v2z"/>
+                        <outlet property="chosenImage" destination="cJA-FT-j3m" id="8r2-IR-IZ5"/>
                         <outlet property="countryLabel" destination="miI-Bs-i3S" id="f1A-J9-bqo"/>
                         <outlet property="endtimeLabel" destination="Pea-yM-EV8" id="jEe-OY-x0e"/>
                         <outlet property="locationLabel" destination="m0O-gg-Jd3" id="P70-ZX-NrB"/>
-                        <outlet property="selectedImageView" destination="ZQv-5c-1qw" id="ktX-gK-hW0"/>
                         <outlet property="titleLabel" destination="kNP-nw-6zJ" id="AZN-jd-p6q"/>
                         <outlet property="urlLabel" destination="Yqt-Vk-wzk" id="wVT-9q-Ivy"/>
                     </connections>
@@ -229,7 +230,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2" width="1000" height="563"/>
         <image name="filter" width="512" height="512"/>
         <image name="icons8-search-100" width="100" height="100"/>
         <image name="sort" width="512" height="512"/>
